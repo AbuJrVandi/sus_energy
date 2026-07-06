@@ -1,0 +1,18 @@
+/* Fallback for missing Element Pack icon font */
+[class^="ep-icon-"]:before,
+[class*=" ep-icon-"]:before {
+  font-family: "Arial", "Helvetica", sans-serif !important;
+}
+.ep-icon-arrow-left-0:before { content: "\2039" !important; }
+.ep-icon-arrow-right-0:before { content: "\203A" !important; }
+.ep-icon-arrow-left-5:before { content: "\25C0" !important; }
+.ep-icon-arrow-right-5:before { content: "\25B6" !important; }
+.ep-icon-plus-2:before { content: "\002B" !important; }
+
+/* Fallback for missing WPPageBuilder icon font */
+.xlwpf[class^="wppb-font-"]:before,
+.xlwpf[class*=" wppb-font-"]:before {
+  font-family: "Arial", "Helvetica", sans-serif !important;
+}
+.wppb-font-home:before { content: "\2302" !important; }
+.wppb-font-bolt:before { content: "\26A1" !important; }
