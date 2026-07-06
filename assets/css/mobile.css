@@ -1,0 +1,348 @@
+/* ============================================================
+   SUS ENERGY — Mobile Optimization Styles
+   Only applies at max-width: 767px (Elementor mobile breakpoint)
+   Does NOT affect desktop, tablet, or functionality.
+   ============================================================ */
+
+@media only screen and (max-width: 767px) {
+
+  /* ---- Smooth native scrolling ---- */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  /* ---- Header / Navbar ---- */
+  .elementor-145 .elementor-element.elementor-element-1e67fc40 {
+    margin-bottom: -65px;
+  }
+  .elementor-145 .elementor-element.elementor-element-573b6244 > .elementor-widget-container {
+    margin: 20px 10px 0 10px;
+  }
+  .elementor-145 .elementor-element.elementor-element-573b6244 img {
+    width: 150px;
+  }
+  .elementor-145 .elementor-element.elementor-element-0761db7 {
+    margin-top: 20px;
+  }
+  .elementor-145 .elementor-element.elementor-element-0761db7 .elementor-button {
+    padding: 8px 14px;
+    font-size: 12px;
+    min-height: 40px;
+  }
+  .elementor-145 .elementor-element.elementor-element-0761db7 .elementor-button-icon {
+    font-size: 14px;
+  }
+
+  /* ---- Offcanvas Menu ---- */
+  .bdt-offcanvas-bar {
+    width: 280px;
+  }
+  .elementor-172 .elementor-element.elementor-element-981777e img {
+    width: 180px;
+  }
+
+  /* ---- Home Hero (page-id: 8) ---- */
+  .elementor-8 .elementor-element.elementor-element-a8ca3de {
+    padding: 100px 20px 40px 20px !important;
+  }
+  .elementor-8 .elementor-element.elementor-element-a8ca3de > .elementor-container {
+    min-height: auto;
+  }
+  .elementor-8 .elementor-element.elementor-element-3f3279b > .elementor-element-populated {
+    padding: 0;
+  }
+  .elementor-8 .elementor-element.elementor-element-d0efcab .elementor-heading-title {
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .elementor-8 .elementor-element.elementor-element-6cb112b .elementor-heading-title {
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .elementor-8 .elementor-element.elementor-element-302c4f8 .elementor-heading-title {
+    font-size: 11px !important;
+    letter-spacing: 3px;
+    color: #f0b429 !important;
+    margin-top: 6px;
+  }
+  .elementor-8 .elementor-element.elementor-element-49a8fce {
+    max-width: 100%;
+  }
+  .elementor-8 .elementor-element.elementor-element-49a8fce .elementor-heading-title {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 5px;
+  }
+  .elementor-8 .elementor-element.elementor-element-a86f1cf,
+  .elementor-8 .elementor-element.elementor-element-aece61f {
+    width: 100% !important;
+  }
+  .elementor-8 .elementor-element.elementor-element-a86f1cf .elementor-button,
+  .elementor-8 .elementor-element.elementor-element-aece61f .elementor-button {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    min-height: 50px;
+    border-radius: 12px;
+    justify-content: center;
+  }
+  .elementor-8 .elementor-element.elementor-element-3f3279b .elementor-widget-wrap {
+    gap: 10px;
+  }
+  .elementor-8 .elementor-element.elementor-element-a86f1cf > .elementor-widget-container,
+  .elementor-8 .elementor-element.elementor-element-aece61f > .elementor-widget-container {
+    margin: 0 !important;
+  }
+
+  /* ---- Energy Solutions Grid (hover-box) ---- */
+  .bdt-ep-hover-box-item-wrap {
+    grid-gap: 10px;
+  }
+  .bdt-ep-hover-box-item {
+    padding: 15px 10px;
+    min-height: 140px;
+  }
+  .bdt-ep-hover-box-icon-box .bdt-ep-hover-box-icon-wrap svg {
+    width: 28px;
+    height: 28px;
+  }
+  .bdt-ep-hover-box-title {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .bdt-ep-hover-box-sub-title {
+    font-size: 10px;
+  }
+  .bdt-ep-hover-box-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .bdt-ep-hover-box-button a {
+    font-size: 12px;
+    padding: 6px 14px;
+    min-height: 36px;
+  }
+
+  /* ---- About Section (home page) ---- */
+  .elementor-8 .elementor-element.elementor-element-45ba938 > .elementor-element-populated {
+    padding: 0 15px;
+  }
+  .elementor-8 .elementor-element.elementor-element-21e6eac .elementor-heading-title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .elementor-8 .elementor-element.elementor-element-45ba938 .elementor-widget-text-editor {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .elementor-8 .elementor-element.elementor-element-45ba938 .elementor-widget-text-editor ol {
+    padding-left: 18px;
+  }
+
+  /* ---- Inner Page Hero (elementor-id: 62) ---- */
+  .elementor-62 .elementor-element.elementor-element-e8cec98 {
+    padding: 100px 20px 40px 20px !important;
+  }
+  .elementor-62 .elementor-element.elementor-element-865c2d2 > .elementor-element-populated {
+    border-width: 0 0 0 3px;
+    padding: 0 0 0 14px;
+  }
+  .elementor-62 .elementor-element.elementor-element-aca6c10 .elementor-heading-title {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+  .elementor-62 .elementor-element.elementor-element-TAGLINE1 .elementor-heading-title,
+  .elementor-62 .elementor-element.elementor-element-TAGLINE6 .elementor-heading-title,
+  .elementor-62 .elementor-element.elementor-element-TAGLINE7 .elementor-heading-title,
+  .elementor-62 .elementor-element.elementor-element-TAGLINE8 .elementor-heading-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #f0b429 !important;
+    margin-top: 4px;
+  }
+  .elementor-62 .elementor-element.elementor-element-5d128ba {
+    display: none;
+  }
+
+  /* ---- Team Page ---- */
+  .team-card {
+    padding: 22px 15px 20px;
+  }
+  .team-avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+  }
+  .team-name {
+    font-size: 16px;
+  }
+  .team-role {
+    font-size: 11px;
+  }
+  .team-desc {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .team-social a {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  /* ---- Services Page ---- */
+  .elementor-62 .elementor-element.elementor-element-NEWH1 .elementor-heading-title,
+  .elementor-8 .elementor-element.elementor-element-97d8c85 .elementor-heading-title {
+    font-size: 22px;
+  }
+
+  /* ---- About Page ---- */
+  .elementor-element.elementor-mobile-position-top .elementor-icon-box-wrapper {
+    text-align: center;
+  }
+  .elementor-element.elementor-mobile-position-top .elementor-icon-box-icon {
+    margin-bottom: 8px;
+  }
+  .elementor-element.elementor-mobile-position-top .elementor-icon-box-title {
+    font-size: 18px;
+  }
+  .elementor-element.elementor-mobile-position-top .elementor-icon-box-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ---- Project Gallery ---- */
+  .elementor-73 .elementor-element.elementor-element-25cbfb1 {
+    margin-top: -60px;
+    margin-bottom: 20px;
+  }
+  .elementor-73 .elementor-element.elementor-element-df653a5 .elementor-button {
+    padding: 14px 18px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+  .elementor-73 .elementor-element.elementor-element-d82e512 .bdt-ep-advanced-image-gallery-thumbnail img {
+    height: 200px;
+  }
+  .bdt-ep-advanced-image-gallery-filter {
+    text-align: center;
+  }
+  .bdt-ep-advanced-image-gallery-filter span {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-height: 36px;
+  }
+
+  /* ---- Contact Page ---- */
+  .elementor-button-wrapper .elementor-button {
+    padding: 14px 20px;
+    font-size: 13px;
+    min-height: 44px;
+    border-radius: 40px;
+  }
+
+  /* ---- Header: hide email and WhatsApp top bar on mobile ---- */
+  .elementor-145 .elementor-element.elementor-element-4763ea2a,
+  .elementor-145 .elementor-element.elementor-element-7ef64e7 {
+    display: none !important;
+  }
+
+  /* ---- Footer: hide all icons/emojis on mobile ---- */
+  .elementor-123 .elementor-element.elementor-element-1c28bfb,
+  .elementor-123 .elementor-element.elementor-element-8daf413,
+  .elementor-123 .elementor-element.elementor-element-b6fc4ac,
+  .elementor-123 .elementor-element.elementor-element-1f1a00cd {
+    display: none !important;
+  }
+
+  /* ---- Footer ---- */
+  .elementor-123 .elementor-element.elementor-element-2feb7abc {
+    padding: 40px 15px;
+  }
+  .elementor-123 .elementor-element.elementor-element-506da1c4 > .elementor-element-populated {
+    margin: 0 0 20px 0;
+  }
+  .elementor-123 .elementor-element.elementor-element-146ed25c img {
+    width: 220px;
+  }
+  .elementor-123 .elementor-element.elementor-element-55d50d9e {
+    text-align: center;
+  }
+  .elementor-123 .elementor-element.elementor-element-55d50d9e .elementor-text-editor p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .elementor-123 .elementor-element.elementor-element-1ffdadd4 .elementor-heading-title,
+  .elementor-123 .elementor-element.elementor-element-4430efa6 .elementor-heading-title,
+  .elementor-123 .elementor-element.elementor-element-155db1a0 .elementor-heading-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  .elementor-123 .elementor-element.elementor-element-7878b5d3 .elementor-icon-list-items,
+  .elementor-123 .elementor-element.elementor-element-3e92ef5 .elementor-icon-list-items {
+    text-align: center;
+  }
+  .elementor-123 .elementor-element.elementor-element-7878b5d3 .elementor-icon-list-item > a,
+  .elementor-123 .elementor-element.elementor-element-3e92ef5 .elementor-icon-list-item > a {
+    justify-content: center;
+    font-size: 13px;
+  }
+  .elementor-123 .elementor-element.elementor-element-fc08bfa {
+    text-align: center;
+    font-size: 13px;
+  }
+  .elementor-123 .elementor-element.elementor-element-1c28bfb .elementor-icon-box-title,
+  .elementor-123 .elementor-element.elementor-element-8daf413 .elementor-icon-box-title,
+  .elementor-123 .elementor-element.elementor-element-b6fc4ac .elementor-icon-box-title {
+    font-size: 13px;
+  }
+  .elementor-123 .elementor-element.elementor-element-1f1a00cd {
+    text-align: center;
+  }
+  .elementor-123 .elementor-element.elementor-element-1f1a00cd .elementor-social-icons-wrapper {
+    justify-content: center;
+  }
+
+  /* ---- Footer Copyright Bar ---- */
+  .elementor-123 .elementor-element.elementor-element-2b518d42 .elementor-heading-title {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* ---- Utility: improved touch targets on all buttons ---- */
+  .elementor-button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a.elementor-button {
+    min-height: 44px;
+  }
+
+  /* ---- Utility: prevent horizontal overflow ---- */
+  .elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ---- Improved readability ---- */
+  h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+  }
+  p, li, .elementor-widget-text-editor {
+    word-break: break-word;
+  }
+
+}
