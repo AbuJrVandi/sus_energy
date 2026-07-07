@@ -384,32 +384,106 @@ div#energy-sol ul {
 				</div>
 				<div class="elementor-element elementor-element-d3ba620 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="d3ba620" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
 				<div class="elementor-widget-container">
-					<form class="elementor-form" method="post" name="New Form">
-			<input type="hidden" name="post_id" value="47"/>
-			<input type="hidden" name="form_id" value="d3ba620"/>
-			<input type="hidden" name="referer_title" value="Contact Us" />
-							<input type="hidden" name="queried_id" value="47"/>
+					<form class="elementor-form" id="contactForm" method="post">
 			<div class="elementor-form-fields-wrapper elementor-labels-above">
 								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100">
-												<label for="form-field-name" class="elementor-field-label">Name</label>
-														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Name">
+												<label for="form-field-name" class="elementor-field-label">Name <span style="color:#ef4444;">*</span></label>
+														<input size="1" type="text" name="name" id="form-field-name" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Name" required>
 											</div>
 								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-												<label for="form-field-email" class="elementor-field-label">Email</label>
-														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Email" required="required" aria-required="true">
+												<label for="form-field-email" class="elementor-field-label">Email <span style="color:#ef4444;">*</span></label>
+														<input size="1" type="email" name="email" id="form-field-email" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Email" required>
+											</div>
+								<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-phone elementor-col-100">
+												<label for="form-field-phone" class="elementor-field-label">Phone</label>
+														<input size="1" type="tel" name="phone" id="form-field-phone" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Phone (e.g. +232...)">
+											</div>
+								<div class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-interest elementor-col-100">
+												<label for="form-field-interest" class="elementor-field-label">I'm interested in</label>
+														<select name="interest" id="form-field-interest" class="elementor-field elementor-size-sm elementor-field-textual">
+															<option value="">Select an option...</option>
+															<option value="grid-tied">Grid Tied Systems</option>
+															<option value="backup">Back Up Systems</option>
+															<option value="hybrid">Solar Hybrid Systems</option>
+															<option value="off-grid">Off-Grid Solar Systems</option>
+															<option value="other">Other / Not Sure</option>
+														</select>
 											</div>
 								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
-												<label for="form-field-message" class="elementor-field-label">Message</label>
-						<textarea class="elementor-field-textual elementor-field elementor-size-sm" name="form_fields[message]" id="form-field-message" rows="4" placeholder="Message"></textarea>				</div>
+												<label for="form-field-message" class="elementor-field-label">Message <span style="color:#ef4444;">*</span></label>
+						<textarea class="elementor-field-textual elementor-field elementor-size-sm" name="message" id="form-field-message" rows="4" placeholder="Tell us what you need..." required></textarea>				</div>
 								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-					<button class="elementor-button elementor-size-sm" type="submit">
+					<button class="elementor-button elementor-size-sm" type="submit" id="submitBtn">
 						<span class="elementor-button-content-wrapper">
-																						<span class="elementor-button-text">Send</span>
+																						<span class="elementor-button-text" id="submitBtnText">Send</span>
 													</span>
 					</button>
 				</div>
+				<div id="formFeedback" style="margin-top:16px;text-align:center;font-size:14px;display:none;"></div>
 			</div>
 		</form>
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script>
+		(function() {
+			emailjs.init('IGWjh_DnBaLrUejEj');
+
+			var form = document.getElementById('contactForm');
+			var feedback = document.getElementById('formFeedback');
+			var submitBtn = document.getElementById('submitBtn');
+			var btnText = document.getElementById('submitBtnText');
+			var interestLabels = {
+				'grid-tied': 'Grid Tied Systems',
+				'backup': 'Back Up Systems',
+				'hybrid': 'Solar Hybrid Systems',
+				'off-grid': 'Off-Grid Solar Systems',
+				'other': 'Other / Not Sure'
+			};
+
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+				feedback.style.display = 'none';
+				submitBtn.disabled = true;
+				btnText.textContent = 'Sending...';
+
+				var interest = form.querySelector('[name="interest"]').value;
+
+				var currentDate = new Date().toLocaleDateString('en-US', {
+					year: 'numeric', month: 'long', day: 'numeric',
+					hour: '2-digit', minute: '2-digit'
+				});
+				var templateParams = {
+					subject: 'New inquiry from ' + form.querySelector('[name="name"]').value + ' — SUS ENERGY',
+					to_name: 'SUS ENERGY Team',
+					to_email: 'info@susenergysl.com',
+					name: form.querySelector('[name="name"]').value,
+					email: form.querySelector('[name="email"]').value,
+					phone: form.querySelector('[name="phone"]').value,
+					interest: interest,
+					interest_label: interestLabels[interest] || 'Not specified',
+					message: form.querySelector('[name="message"]').value,
+					date: currentDate
+				};
+
+				emailjs.send('service_w11pmdy', 'template_15jgmym', templateParams)
+					.then(function() {
+						feedback.style.display = 'block';
+						feedback.style.color = '#22c55e';
+						feedback.textContent = 'Thank you! We have received your message and will get back to you shortly.';
+						form.reset();
+					})
+					.catch(function(err) {
+						console.error('EmailJS error:', err);
+						feedback.style.display = 'block';
+						feedback.style.color = '#ef4444';
+						feedback.textContent = err.text || 'Could not connect. Please email us directly at info@susenergysl.com.';
+					})
+					.finally(function() {
+						submitBtn.disabled = false;
+						btnText.textContent = 'Send';
+					});
+			});
+		})();
+		</script>
 				</div>
 				</div>
 					</div>
