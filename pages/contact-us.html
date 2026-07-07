@@ -470,6 +470,14 @@ div#energy-sol ul {
 						feedback.style.color = '#22c55e';
 						feedback.textContent = 'Thank you! We have received your message and will get back to you shortly.';
 						form.reset();
+						var adminUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+							? 'http://localhost:3000/api/submit'
+							: 'https://admin.susenergysl.com/api/submit';
+						fetch(adminUrl, {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify(templateParams)
+						}).catch(function() {});
 					})
 					.catch(function(err) {
 						console.error('EmailJS error:', err);
